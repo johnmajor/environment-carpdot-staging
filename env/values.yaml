@@ -1,5 +1,5 @@
 expose:
-  Args: 
+  Args:
     - --v
     - 4
   Annotations:
@@ -7,17 +7,17 @@ expose:
     helm.sh/hook-delete-policy: hook-succeeded
 
 cleanup:
-  Args: 
+  Args:
     - --cleanup
   Annotations:
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
 expose:
   config:
-    domain: 10.0.0.120.nip.io
+    domain: k8s.zeddworks.com
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsacme: "true"
     pathMode: ""
   Annotations:
     helm.sh/hook: post-install,post-upgrade
