@@ -16,7 +16,7 @@ expose:
   config:
     domain: k8s.zeddworks.com
     exposer: Ingress
-    http: "false"
+    http: "true"
     tlsacme: "true"
     pathMode: ""
   Annotations:
